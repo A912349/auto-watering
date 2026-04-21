@@ -9,5 +9,10 @@ String getIP();
 String getSSID();
 bool isAPMode();
 String getTimeStr();
+void handleRoot();
+void handleData();
+void handleCmd();
+void handleSave();
+void handleSet();
 
 extern bool apMode;
