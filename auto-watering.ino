@@ -81,10 +81,10 @@ void loop() {
   }
 
   // автополив
-  if (autoMode && !pumpActive && moisture > threshold) {
+  if (autoMode && !pumpActive && moisture < threshold) {
     unsigned long intervalMs = waterInterval * 15UL * 60UL * 1000UL;
 
-    if (autoMode && !pumpActive && moisture > threshold) {
+    if (autoMode && !pumpActive && moisture < threshold) {
       if (millis() - lastWaterTime > intervalMs) {
         startPump();
         lastWaterTime = millis();
